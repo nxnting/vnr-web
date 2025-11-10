@@ -1,0 +1,186 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #0b0b0c;
+  --foreground: #ffffff;
+  --card: #1a1a1b;
+  --card-foreground: #ffffff;
+  --popover: #1a1a1b;
+  --popover-foreground: #ffffff;
+  --primary: #ef4444;
+  --primary-foreground: #ffffff;
+  --secondary: #1a1a1b;
+  --secondary-foreground: #ef4444;
+  --muted: #2a2a2b;
+  --muted-foreground: #999999;
+  --accent: #ef4444;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #ef4444;
+  --input: #2a2a2b;
+  --ring: #ef4444;
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: #0b0b0c;
+  --foreground: #ffffff;
+  --card: #1a1a1b;
+  --card-foreground: #ffffff;
+  --popover: #1a1a1b;
+  --popover-foreground: #ffffff;
+  --primary: #ef4444;
+  --primary-foreground: #ffffff;
+  --secondary: #1a1a1b;
+  --secondary-foreground: #ef4444;
+  --muted: #2a2a2b;
+  --muted-foreground: #999999;
+  --accent: #ef4444;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #ef4444;
+  --input: #2a2a2b;
+  --ring: #ef4444;
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  /* Changed to Inter font for Vietnamese support */
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Add custom animations and effects for the landing page */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    text-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(239, 68, 68, 0.8);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.glow-red {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.scroll-fade {
+  opacity: 0;
+}
+
+.scroll-fade.visible {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Red gradient button effect */
+.btn-red-gradient {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  transition: all 0.3s ease;
+}
+
+.btn-red-gradient:hover {
+  background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+}
+
+/* Red border with glow */
+.border-red-glow {
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  box-shadow: inset 0 0 10px rgba(239, 68, 68, 0.1);
+}
+
+.border-red-glow:hover {
+  border-color: rgba(239, 68, 68, 0.6);
+  box-shadow: inset 0 0 15px rgba(239, 68, 68, 0.2), 0 0 15px rgba(239, 68, 68, 0.3);
+}
