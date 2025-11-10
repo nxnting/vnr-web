@@ -13,6 +13,7 @@ export default function Header({ scrolled }: HeaderProps) {
     { name: "Trang chủ", href: "#" },
     { name: "Nội dung", href: "#section-1" },
     { name: "Logic", href: "#logic" },
+    { name: "Quiz", href: "/quiz" },
     { name: "Tài liệu", href: "#section-references" },
   ]
 
