@@ -778,7 +778,7 @@ export default function QuizPage() {
                   onClick={startQuiz}
                   className="px-8 py-4 btn-red-gradient text-white font-bold rounded-lg text-lg hover:scale-105 transition-transform"
                 >
-                  LÀM LẠI QUIZ
+                  LÀM LẠI QUIZ!
                 </button>
               </div>
             </div>
