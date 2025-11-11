@@ -1,21 +1,22 @@
-"use client"
+"use client";
 
-import { useState } from "react"
+import { useState } from "react";
+import Link from "next/link";
 
 interface HeaderProps {
-  scrolled: boolean
+  scrolled: boolean;
 }
 
 export default function Header({ scrolled }: HeaderProps) {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const menuItems = [
     { name: "Trang chủ", href: "#" },
     { name: "Nội dung", href: "#section-1" },
-    { name: "Logic", href: "#logic" },
+    { name: "Logic", href: "#section-logic" },
     { name: "Quiz", href: "/quiz" },
     { name: "Tài liệu", href: "#section-references" },
-  ]
+  ];
 
   return (
     <header
@@ -27,7 +28,12 @@ export default function Header({ scrolled }: HeaderProps) {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <span className="text-xl sm:text-2xl font-sans font-bold text-red-500 glow-red">VIETNAM</span>
+            <Link
+              href="/"
+              className="text-xl sm:text-2xl font-sans font-bold text-red-500 glow-red hover:text-red-400 transition-colors duration-200"
+            >
+              VNR202
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -48,11 +54,26 @@ export default function Header({ scrolled }: HeaderProps) {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden text-red-500 hover:text-red-400"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
               {mobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               )}
             </svg>
           </button>
@@ -77,5 +98,5 @@ export default function Header({ scrolled }: HeaderProps) {
         )}
       </div>
     </header>
-  )
+  );
 }

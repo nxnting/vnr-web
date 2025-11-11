@@ -8,7 +8,7 @@ import ContentSection from "@/components/content-section";
 import LogicConnection from "@/components/logic-connection";
 import Footer from "@/components/footer";
 import ChatBot from "@/components/chatbot";
-
+import ReferenceItem from "@/components/ui/reference-item";
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
   const [visibleSections, setVisibleSections] = useState(new Set());
@@ -100,8 +100,13 @@ export default function Home() {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Case 1 */}
-              <div className="bg-gradient-to-b from-red-500/10 to-transparent rounded-lg border border-red-500/30 border-red-glow hover:border-red-500/60 transition-all overflow-hidden">
+              {/* Case 1: VNCB */}
+              <a
+                href="https://thanhnien.vn/dai-an-vncb-de-nghi-pham-cong-danh-20-nam-tu-tram-be-5-6-nam-tu-185728361.htm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-gradient-to-b from-red-500/10 to-transparent rounded-lg border border-red-500/30 hover:border-red-500/60 transition-all overflow-hidden"
+              >
                 <div className="relative w-full h-48">
                   <Image
                     src="3.jpg"
@@ -111,11 +116,11 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
                 </div>
-                <div className="p-6">
+                <div className="p-6 group-hover:bg-red-500/5 transition-all">
                   <div className="text-red-500 font-bold text-sm mb-2">
                     Tài chính – Ngân hàng
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-3">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-red-400 transition">
                     Ngân hàng Xây dựng (VNCB) – Phạm Công Danh
                   </h3>
                   <div className="mb-4">
@@ -135,10 +140,15 @@ export default function Home() {
                     xét xử nhiều cá nhân; thu hồi/tạm thu tài sản.
                   </p>
                 </div>
-              </div>
+              </a>
 
-              {/* Case 2 */}
-              <div className="bg-gradient-to-b from-red-500/10 to-transparent rounded-lg border border-red-500/30 border-red-glow hover:border-red-500/60 transition-all overflow-hidden">
+              {/* Case 2: Mobifone */}
+              <a
+                href="https://baochinhphu.vn/dai-an-mobifone-mua-avg-hinh-phat-nghiem-khac-doi-voi-cac-bi-cao-102266271.htm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-gradient-to-b from-red-500/10 to-transparent rounded-lg border border-red-500/30 hover:border-red-500/60 transition-all overflow-hidden"
+              >
                 <div className="relative w-full h-48">
                   <Image
                     src="4.jpg"
@@ -148,11 +158,11 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
                 </div>
-                <div className="p-6">
+                <div className="p-6 group-hover:bg-red-500/5 transition-all">
                   <div className="text-red-500 font-bold text-sm mb-2">
                     M&A – Tài sản công
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-3">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-red-400 transition">
                     Mobifone mua AVG
                   </h3>
                   <div className="mb-4">
@@ -171,10 +181,15 @@ export default function Home() {
                     nhiều cán bộ cấp cao ở bộ/ngành/doanh nghiệp nhà nước.
                   </p>
                 </div>
-              </div>
+              </a>
 
-              {/* Case 3 */}
-              <div className="bg-gradient-to-b from-red-500/10 to-transparent rounded-lg border border-red-500/30 border-red-glow hover:border-red-500/60 transition-all overflow-hidden">
+              {/* Case 3: PVC */}
+              <a
+                href="https://tienphong.vn/trinh-xuan-thanh-toi-lay-tien-dau-ma-den-post1318874.tpo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-gradient-to-b from-red-500/10 to-transparent rounded-lg border border-red-500/30 hover:border-red-500/60 transition-all overflow-hidden"
+              >
                 <div className="relative w-full h-48">
                   <Image
                     src="5.jpg"
@@ -184,11 +199,11 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
                 </div>
-                <div className="p-6">
+                <div className="p-6 group-hover:bg-red-500/5 transition-all">
                   <div className="text-red-500 font-bold text-sm mb-2">
                     Xây lắp – Dầu khí
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-3">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-red-400 transition">
                     PVC – Trịnh Xuân Thanh
                   </h3>
                   <div className="mb-4">
@@ -205,7 +220,7 @@ export default function Home() {
                     trách nhiệm hình sự; nhấn mạnh răn đe và siết quản trị.
                   </p>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </section>
@@ -225,23 +240,254 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
               {/* Indicators */}
               <div className="bg-gradient-to-b from-red-500/10 to-transparent p-8 rounded-lg border border-red-500/30 border-red-glow">
-                <h3 className="text-2xl font-bold text-red-400 mb-6">
-                  Chỉ số (placeholder)
-                </h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li className="flex items-start gap-3">
-                    <span className="text-red-500 font-bold">•</span>
-                    <span>GDP, FDI, xuất–nhập khẩu: điền số & nguồn</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-red-500 font-bold">•</span>
-                    <span>Số vụ án PCTN theo năm; tài sản thu hồi</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-red-500 font-bold">•</span>
-                    <span>PAPI, PAR, CPI, PCI (nếu GV cho phép)</span>
-                  </li>
-                </ul>
+                <h3 className="text-2xl font-bold text-red-400 mb-6">Chỉ số</h3>
+
+                <div className="space-y-3">
+                  {/* GDP – FDI – Xuất/nhập khẩu */}
+                  <details className="group rounded-lg border border-red-500/30 bg-red-500/5 open:bg-red-500/10 transition">
+                    <summary className="cursor-pointer list-none px-4 py-3 flex items-start justify-between gap-3">
+                      <span className="text-sm sm:text-base text-gray-200 font-medium">
+                        GDP, FDI, xuất–nhập khẩu{" "}
+                        <span className="opacity-60"></span>
+                      </span>
+                      <a
+                        href="https://forbes.vn/goc-nhin-ve-tang-truong-xuat-khau-cua-viet-nam/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="shrink-0 inline-flex items-center gap-1 text-red-400 hover:text-red-300 text-xs sm:text-sm"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        Nguồn gợi ý
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 24 24"
+                          className="opacity-90"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"
+                          />
+                          <path
+                            fill="currentColor"
+                            d="M5 5h6v2H7v10h10v-4h2v6H5z"
+                          />
+                        </svg>
+                      </a>
+                    </summary>
+                    <div className="px-4 pb-4 pt-0 text-gray-300 text-sm leading-relaxed border-t border-red-500/20">
+                      <ul className="list-disc pl-5 space-y-1">
+                        <li>
+                          GDP (năm …): <span className="text-red-300">—</span>
+                        </li>
+                        <li>
+                          FDI giải ngân (năm …):{" "}
+                          <span className="text-red-300">—</span>
+                        </li>
+                        <li>
+                          Xuất–nhập khẩu (năm …):{" "}
+                          <span className="text-red-300">—</span>
+                        </li>
+                      </ul>
+                      <div className="mt-3 flex flex-wrap gap-3">
+                        <a
+                          href="https://www.nso.gov.vn/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs text-red-300 hover:text-red-200 underline"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          Tổng cục Thống kê
+                        </a>
+                        <a
+                          href="https://data.worldbank.org/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs text-red-300 hover:text-red-2 00 underline"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          World Bank Data
+                        </a>
+                        <a
+                          href="https://www.customs.gov.vn/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs text-red-300 hover:text-red-200 underline"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          Hải quan (xuất–nhập khẩu)
+                        </a>
+                      </div>
+                    </div>
+                  </details>
+
+                  {/* Vụ án & tài sản thu hồi */}
+                  <details className="group rounded-lg border border-red-500/30 bg-red-500/5 open:bg-red-500/10 transition">
+                    <summary className="cursor-pointer list-none px-4 py-3 flex items-start justify-between gap-3">
+                      <span className="text-sm sm:text-base text-gray-200 font-medium">
+                        Số vụ án PCTN theo năm; tài sản thu hồi{" "}
+                        <span className="opacity-60"></span>
+                      </span>
+                      <a
+                        href="https://baochinhphu.vn/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="shrink-0 inline-flex items-center gap-1 text-red-400 hover:text-red-300 text-xs sm:text-sm"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        Nguồn gợi ý
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 24 24"
+                          className="opacity-90"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"
+                          />
+                          <path
+                            fill="currentColor"
+                            d="M5 5h6v2H7v10h10v-4h2v6H5z"
+                          />
+                        </svg>
+                      </a>
+                    </summary>
+                    <div className="px-4 pb-4 pt-0 text-gray-300 text-sm leading-relaxed border-t border-red-500/20">
+                      <ul className="list-disc pl-5 space-y-1">
+                        <li>
+                          Số vụ án PCTN (năm …):{" "}
+                          <span className="text-red-300">—</span>
+                        </li>
+                        <li>
+                          Tài sản thu hồi (tỷ đồng, năm …):{" "}
+                          <span className="text-red-300">—</span>
+                        </li>
+                      </ul>
+                      <div className="mt-3 flex flex-wrap gap-3">
+                        <a
+                          href="https://baochinhphu.vn/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs text-red-300 hover:text-red-200 underline"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          Báo Chính phủ
+                        </a>
+                        <a
+                          href="https://vksndtc.gov.vn/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs text-red-300 hover:text-red-200 underline"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          VKSND Tối cao
+                        </a>
+                        <a
+                          href="https://toaan.gov.vn/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs text-red-300 hover:text-red-200 underline"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          TAND Tối cao
+                        </a>
+                      </div>
+                    </div>
+                  </details>
+
+                  {/* PAPI – PAR – CPI – PCI */}
+                  <details className="group rounded-lg border border-red-500/30 bg-red-500/5 open:bg-red-500/10 transition">
+                    <summary className="cursor-pointer list-none px-4 py-3 flex items-start justify-between gap-3">
+                      <span className="text-sm sm:text-base text-gray-200 font-medium">
+                        PAPI, PAR, CPI, PCI{" "}
+                        <span className="opacity-60"></span>
+                      </span>
+                      <a
+                        href="https://papi.org.vn/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="shrink-0 inline-flex items-center gap-1 text-red-400 hover:text-red-300 text-xs sm:text-sm"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        Nguồn gợi ý
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 24 24"
+                          className="opacity-90"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"
+                          />
+                          <path
+                            fill="currentColor"
+                            d="M5 5h6v2H7v10h10v-4h2v6H5z"
+                          />
+                        </svg>
+                      </a>
+                    </summary>
+                    <div className="px-4 pb-4 pt-0 text-gray-300 text-sm leading-relaxed border-t border-red-500/20">
+                      <ul className="list-disc pl-5 space-y-1">
+                        <li>
+                          PAPI (quản trị & hành chính công):{" "}
+                          <span className="text-red-300">—</span>
+                        </li>
+                        <li>
+                          PAR Index (cải cách hành chính):{" "}
+                          <span className="text-red-300">—</span>
+                        </li>
+                        <li>
+                          CPI (Corruption Perceptions Index):{" "}
+                          <span className="text-red-300">—</span>
+                        </li>
+                        <li>
+                          PCI (năng lực cạnh tranh cấp tỉnh):{" "}
+                          <span className="text-red-300">—</span>
+                        </li>
+                      </ul>
+                      <div className="mt-3 flex flex-wrap gap-3">
+                        <a
+                          href="https://papi.org.vn/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs text-red-300 hover:text-red-200 underline"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          PAPI
+                        </a>
+                        <a
+                          href="https://parindex.gov.vn/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs text-red-300 hover:text-red-200 underline"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          PAR Index
+                        </a>
+                        <a
+                          href="https://www.transparency.org/en/cpi"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs text-red-300 hover:text-red-200 underline"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          Transparency Intl – CPI
+                        </a>
+                        <a
+                          href="https://pcivietnam.vn/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs text-red-300 hover:text-red-200 underline"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          PCI Việt Nam
+                        </a>
+                      </div>
+                    </div>
+                  </details>
+                </div>
               </div>
 
               {/* References */}
@@ -249,25 +495,121 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-red-400 mb-6">
                   Tài liệu tham khảo
                 </h3>
-                <ul className="space-y-3 text-gray-300 text-sm">
-                  <li className="flex items-start gap-3">
-                    <span className="text-red-500 font-bold">1.</span>
-                    <span>
-                      Giáo trình Lịch sử ĐCSVN, NXB CTQG Sự thật, 2021, tr.
-                      310–334
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-red-500 font-bold">2.</span>
-                    <span>Văn kiện Đảng: Đại hội XII–XIII</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-red-500 font-bold">3.</span>
-                    <span>
-                      Thông cáo cơ quan tiến hành tố tụng; báo chí chính thống
-                    </span>
-                  </li>
-                </ul>
+
+                <div className="space-y-3">
+                  <details className="group rounded-lg border border-red-500/30 bg-red-500/5 open:bg-red-500/10 transition">
+                    <summary className="cursor-pointer list-none px-4 py-3 flex items-start justify-between gap-3">
+                      <span className="text-sm sm:text-base text-gray-200 font-medium">
+                        Giáo trình Lịch sử ĐCSVN, NXB CTQG Sự thật, 2021, tr.
+                        310–334
+                      </span>
+                      <a
+                        href="https://www.slideshare.net/slideshow/gio-trnh-lch-s-ng-cng-sn-vit-nam-b-gdt-ctqg-2021pdf/257548548"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="shrink-0 inline-flex items-center gap-1 text-red-400 hover:text-red-300 text-xs sm:text-sm"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        Đọc bài gốc
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 24 24"
+                          className="opacity-90"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"
+                          />
+                          <path
+                            fill="currentColor"
+                            d="M5 5h6v2H7v10h10v-4h2v6H5z"
+                          />
+                        </svg>
+                      </a>
+                    </summary>
+                    <div className="px-4 pb-4 pt-0 text-gray-300 text-sm leading-relaxed border-t border-red-500/20">
+                      Hệ thống hóa đường lối, bối cảnh và thành tựu của Đảng qua
+                      các thời kỳ, trong đó có phần nói rõ về công tác xây dựng
+                      Đảng và phòng chống tham nhũng.
+                    </div>
+                  </details>
+
+                  <details className="group rounded-lg border border-red-500/30 bg-red-500/5 open:bg-red-500/10 transition">
+                    <summary className="cursor-pointer list-none px-4 py-3 flex items-start justify-between gap-3">
+                      <span className="text-sm sm:text-base text-gray-200 font-medium">
+                        Văn kiện Đảng: Đại hội XII–XIII
+                      </span>
+                      <a
+                        href="https://tulieuvankien.dangcongsan.vn/van-kien-tu-lieu-ve-dang/book/sach-chinh-tri/van-kien-dai-hoi-dai-bieu-toan-quoc-lan-thu-xiii-tap-1-403"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="shrink-0 inline-flex items-center gap-1 text-red-400 hover:text-red-300 text-xs sm:text-sm"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        Đọc bài gốc
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 24 24"
+                          className="opacity-90"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"
+                          />
+                          <path
+                            fill="currentColor"
+                            d="M5 5h6v2H7v10h10v-4h2v6H5z"
+                          />
+                        </svg>
+                      </a>
+                    </summary>
+                    <div className="px-4 pb-4 pt-0 text-gray-300 text-sm leading-relaxed border-t border-red-500/20">
+                      Nêu rõ tư tưởng chỉ đạo “không có vùng cấm, không có ngoại
+                      lệ” trong phòng chống tham nhũng; khẳng định minh bạch,
+                      kiểm soát quyền lực và trách nhiệm giải trình là trọng tâm
+                      cải cách.
+                    </div>
+                  </details>
+
+                  <details className="group rounded-lg border border-red-500/30 bg-red-500/5 open:bg-red-500/10 transition">
+                    <summary className="cursor-pointer list-none px-4 py-3 flex items-start justify-between gap-3">
+                      <span className="text-sm sm:text-base text-gray-200 font-medium">
+                        Thông cáo cơ quan tiến hành tố tụng; báo chí chính thống
+                      </span>
+                      <a
+                        href="https://baochinhphu.vn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="shrink-0 inline-flex items-center gap-1 text-red-400 hover:text-red-300 text-xs sm:text-sm"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        Đọc bài gốc
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 24 24"
+                          className="opacity-90"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"
+                          />
+                          <path
+                            fill="currentColor"
+                            d="M5 5h6v2H7v10h10v-4h2v6H5z"
+                          />
+                        </svg>
+                      </a>
+                    </summary>
+                    <div className="px-4 pb-4 pt-0 text-gray-300 text-sm leading-relaxed border-t border-red-500/20">
+                      Tổng hợp các bài báo, bản án, thông cáo và dữ liệu thực tế
+                      về các vụ án tiêu biểu trong chiến dịch “Đốt lò”; cung cấp
+                      bằng chứng minh họa cho luận điểm của đề tài.
+                    </div>
+                  </details>
+                </div>
               </div>
             </div>
           </div>

@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Left */}
           <div className="text-center md:text-left">
-            <span className="text-red-500 font-bold text-xl">VIETNAM</span>
+            <span className="text-red-500 font-bold text-xl">VNR202</span>
             <p className="text-gray-500 mt-2 text-sm">Nhóm 7</p>
           </div>
 

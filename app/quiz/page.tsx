@@ -593,7 +593,7 @@ export default function QuizPage() {
                     <div>
                       <h3 className="font-bold text-lg text-red-500">10 câu hỏi ngẫu nhiên</h3>
                       <p className="text-gray-400">
-                        Mỗi lần làm quiz sẽ có 10 câu hỏi được chọn ngẫu nhiên từ bộ 50 câu hỏi
+                        Mỗi lần làm quiz sẽ có 10 câu hỏi được chọn ngẫu nhiên từ bộ 200 câu hỏi
                       </p>
                     </div>
                   </div>
